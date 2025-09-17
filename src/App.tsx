@@ -1,11 +1,11 @@
-import AuthPage from "./Pages/AuthPage"
+import { BrowserRouter } from "react-router-dom"
+import Router from "./router/Router"
 
 function App() {
   return (
-    <div className="font-vazir">
-      <h1>دیوار</h1>
-      <AuthPage />
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
 
