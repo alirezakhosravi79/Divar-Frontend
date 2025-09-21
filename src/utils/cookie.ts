@@ -12,4 +12,11 @@ const setCookie = (tokens: Tokens): void => {
   }`;
 };
 
-export  {setCookie};
+const getCookie = (cookeiName: string) => {
+  return document.cookie
+    .split(";")
+    .find((token) => token.trim().split("=")[0] === cookeiName)
+    ?.split("=")[1];
+};
+
+export { setCookie, getCookie };
